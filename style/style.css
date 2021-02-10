@@ -1,0 +1,219 @@
+/*FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*PAGE*/
+
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
+}
+
+/*HEADER*/
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__title {
+  font-family: "Shrikhand";
+  font-size: 3em;
+}
+
+/*CONTAINER TOP*/
+
+.container__top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding:1em;
+}
+
+.containertop__address {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c5c4c4;
+}
+.containertop__address .fas {
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.containertop__address__text {
+  font-size: 1.5em;
+}
+
+.containertop__title {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e4e4;
+}
+
+.containertop__title__textmain {
+  font-size: 1.5em;
+}
+
+.containertop__title__textsecond {
+  font-size: 1em;
+}
+
+.containertop_title__button {
+  background: linear-gradient(160deg, #ff79da, #9356dc);
+  border-radius: 10em 10em 10em 10em;
+  padding: 1em;
+  font-size: 1em;
+  color: white;
+  border-style: none;
+  cursor: pointer;
+}
+
+/*TUTORIAL*/
+
+.containertutorial {
+  width: 100%;
+}
+
+.containertutorial__title {
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.containertutorial_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.containertutorial__list__button {
+  border-radius: 1em;
+  padding: 2em;
+  background-color: #e4e4e4;
+  width: 15em;
+  border-radius: 1em;
+}
+
+/*RESTAURANTS*/
+
+.containerrestaurants{
+  background-color: #e4e4e4;
+  height:auto;
+  padding: 1em;
+}
+
+.containerrestaurants__title {
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.containerrestaurants__list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.containerrestaurants__list__card {
+  width: 35%;
+  height: 15em;
+  border-radius: 1em;
+  border-style: solid;
+  border-width: 0em;
+  margin: 2em;
+}
+
+.containerrestaurants__list__card__image {
+  height: 80%;
+  border-radius: 1em;
+}
+
+.containerrestaurants__list__card__image__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.containerrestaurants__list__card__text{
+  height: 25%;
+  background-color: white;
+  padding:0.5em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.containerrestaurants__list__card__text p{
+color: black;
+margin-top:0.3em;
+margin-bottom:0.3em;
+}
+
+.containerrestaurants__list__card__text__name{
+  font-weight:bold;
+  width:70%
+}
+
+.containerrestaurants__list__card__text__location{
+  width:70%
+}
+
+.containerrestaurants__list__card__text .far{
+  font-size: 1.5em;
+  color: grey;
+}
+
+
+/*FOOTER*/
+
+.footer {
+  background-color: #353535;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.footer__list {
+  list-style-type: none;
+  line-height: 1.5em;
+  color: white;
+}
+
+.footer__list__title {
+  font-family: "Shrikhand";
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+.footer__list__element a {
+  color: white;
+}
+
+.footer__list .fas {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.footer__list__link:hover {
+  color: #ff79da;
+}
