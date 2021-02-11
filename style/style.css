@@ -14,6 +14,21 @@ a {
   text-decoration: none;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+  }
+}
+
 /*HEADER*/
 
 .header {
@@ -28,13 +43,19 @@ a {
   font-size: 3em;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  .header__title {
+    font-size: 2em;
+  }
+}
+
 /*CONTAINER TOP*/
 
 .container__top {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding:1em;
+  padding: 1em;
 }
 
 .containertop__address {
@@ -43,7 +64,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #c5c4c4;
+  background-color: #5c5c5c;
 }
 .containertop__address .fas {
   font-size: 1.5em;
@@ -54,6 +75,7 @@ a {
 
 .containertop__address__text {
   font-size: 1.5em;
+  text-align: center;
 }
 
 .containertop__title {
@@ -64,14 +86,17 @@ a {
   justify-content: center;
   align-items: center;
   background-color: #e4e4e4;
+  text-align: center;
 }
 
 .containertop__title__textmain {
   font-size: 1.5em;
+  text-align: center;
 }
 
 .containertop__title__textsecond {
   font-size: 1em;
+  text-align: center;
 }
 
 .containertop_title__button {
@@ -84,10 +109,35 @@ a {
   cursor: pointer;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  .containertop__address {
+    padding-top: 0em;
+    padding-bottom: 0em;
+  }
+  .containertop__address .fas {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+  }
+  .containertop__address__text {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+  }
+  .containertop__title__textmain {
+    width: 80%;
+  }
+
+  .containertop__title__textsecond {
+    width: 90%;
+  }
+}
+
 /*TUTORIAL*/
 
 .containertutorial {
   width: 100%;
+  padding: 1em;
 }
 
 .containertutorial__title {
@@ -98,23 +148,86 @@ a {
 .containertutorial_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.5em;
+  flex-direction:column;
 }
 
 .containertutorial__list__button {
   border-radius: 1em;
-  padding: 2em;
+  padding: 0.2em;
   background-color: #e4e4e4;
-  width: 15em;
-  border-radius: 1em;
+  width: 40%;
+  border-radius: 2em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.containertutorial__list__button__numbercontainer {
+  color: white;
+  background: #9356dc;
+  border-radius: 100%;
+  padding: 0.5em;
+  margin-left: -1em;
+  width: 1em;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containertutorial__list__button .fas {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  color: grey;
+}
+.containertutorial__list__button__text {
+  width: 75%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .containertutorial {
+    padding-top: 2em;
+    padding-bottom: 3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .containertutorial_list {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .containertutorial__list__button {
+    width: 85%;
+    margin-bottom: 0.5em;
+  }
+  .containertutorial__list__button__numbercontainer {
+    width: 0.5em;
+    height: 0.5em;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+  .containertutorial_list {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .containertutorial__list__button {
+    width: 60%;
+    margin-bottom: 1em;
+  }
 }
 
 /*RESTAURANTS*/
 
-.containerrestaurants{
+.containerrestaurants {
   background-color: #e4e4e4;
-  height:auto;
+  height: auto;
   padding: 1em;
 }
 
@@ -152,45 +265,75 @@ a {
   border-top-right-radius: 1em;
 }
 
-.containerrestaurants__list__card__text{
+.containerrestaurants__list__card__text {
   height: 25%;
   background-color: white;
-  padding:0.5em;
+  padding: 0.5em;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
-  display:flex;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.containerrestaurants__list__card__text p{
-color: black;
-margin-top:0.3em;
-margin-bottom:0.3em;
+.containerrestaurants__list__card__text p {
+  color: black;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 }
 
-.containerrestaurants__list__card__text__name{
-  font-weight:bold;
-  width:70%
+.containerrestaurants__list__card__text__name {
+  font-weight: bold;
+  width: 70%;
 }
 
-.containerrestaurants__list__card__text__location{
-  width:70%
+.containerrestaurants__list__card__text__location {
+  width: 70%;
 }
 
-.containerrestaurants__list__card__text .far{
+.containerrestaurants__list__card__text .far {
   font-size: 1.5em;
   color: grey;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  .containerrestaurants {
+    padding-top: 2em;
+    padding-bottom: 3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .containerrestaurants__title {
+    width: 100%;
+    margin: 0em;
+    margin-bottom: 1em;
+  }
+  .containerrestaurants__list__card {
+    width: 100%;
+    margin: 0em;
+    margin-bottom: 2em;
+  }
+
+  .containerrestaurants__list__card__image {
+    height: 70%;
+  }
+  .containerrestaurants__list__card__text {
+    height: 30%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+  .containerrestaurants__list__card {
+    width: 100%;
+  }
+}
 
 /*FOOTER*/
 
 .footer {
   background-color: #353535;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
 }
 
 .footer__list {
@@ -216,4 +359,10 @@ margin-bottom:0.3em;
 
 .footer__list__link:hover {
   color: #ff79da;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .footer {
+    padding: 0.5em;
+  }
 }
