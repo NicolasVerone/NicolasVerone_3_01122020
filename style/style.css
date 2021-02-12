@@ -64,7 +64,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5c5c5c;
+  background-color: rgba(202, 202, 202, 0.945);
 }
 .containertop__address .fas {
   font-size: 1.5em;
@@ -85,7 +85,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #e4e4e4;
+  background-color: rgba(236, 235, 235, 0.945);
   text-align: center;
 }
 
@@ -157,7 +157,7 @@ a {
 .containertutorial__list__button {
   border-radius: 1em;
   padding: 0.2em;
-  background-color: #e4e4e4;
+  background-color: rgba(236, 235, 235, 0.945);
   width: 40%;
   border-radius: 2em;
   display: flex;
@@ -226,7 +226,7 @@ a {
 /*RESTAURANTS*/
 
 .containerrestaurants {
-  background-color: #e4e4e4;
+  background-color: rgba(236, 235, 235, 0.945);
   height: auto;
   padding: 1em;
 }
