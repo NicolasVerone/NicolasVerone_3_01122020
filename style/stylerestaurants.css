@@ -67,9 +67,15 @@ a {
   width: 60%;
 }
 
+.header__title__container a:link{
+  text-decoration:none;
+  color: black;
+}
+
 .header__title {
   font-family: "Shrikhand";
   font-size: 3em;
+
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -83,58 +89,33 @@ a {
 
 /*HERO*/
 
-.hero {
-  width: 100%;
-  height: 30em;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0;
-}
+
 
 .hero__image {
-  height: 80%;
-  border-radius: 1em;
+  height: 100%;
+  height: 20em;
+  
 }
 
 .hero__image__img {
   width: 100%;
-  height: 100%;
+  height:100%;
   object-fit: cover;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
 }
 
-.hero__title {
-  height: 20%;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  background-color: rgba(236, 235, 235, 0.945);
-  padding: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.hero__title__text {
-  font-family: "Shrikhand";
-}
 
 .hero__title .far {
   font-size: 2em;
   width: 10%;
+  padding-right:5%;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .hero {
     height: 20em;
     width: 100%;
-  }
-  .hero__title__text {
-    font-size: 1.5em;
-  }
-  .hero__title .far {
-    font-size: 1.5em;
-  }
+}
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   .hero {
@@ -151,6 +132,34 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding-bottom: 2em;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  position:relative;top:-3em;
+  margin-bottom:-3em;
+}
+
+.main__title {
+  height: auto;
+  background-color: rgba(236, 235, 235, 0.945);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width:100%;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+ 
+
+}
+
+.main__title__text {
+  font-family: "Shrikhand";
+  width:30%;
+  padding-left:5%
+}
+
+.main__title .far{
+  padding-right:5%;
+  font-size:1.5em;
 }
 
 .main__section {
@@ -160,8 +169,18 @@ a {
 }
 
 .main__section__title {
+  display: inline-block;
+    border-bottom:  #99E2D0;
+    border-bottom-style: solid;
+    border-bottom-width: 0.2em;
+    width: 10%;
+    font-weight: lighter;
+    font-size: 1em;
+    align-self: flex-start;
+    margin-left:1em;
+    text-align: justify;
   text-transform: uppercase;
-  font-weight: normal;
+  padding-bottom:0.5em;
 }
 
 .main__section__card {
@@ -200,30 +219,42 @@ a {
 .main__button {
   background: linear-gradient(160deg, #ff79da, #9356dc);
   border-radius: 10em 10em 10em 10em;
-  padding: 1em;
-  font-size: 1em;
+  padding: 1.2em;
+  font-size: 1.1em;
   color: white;
   border-style: none;
   cursor: pointer;
-  width: 14em;
+  font-weight: bold;
+  box-shadow: 0em 0.5em 0.3em 0.3em rgba(255, 253, 253, 0.75);
+  margin-top:1em;
+  margin-bottom: 1em;
+  width:12em;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .main {
     flex-direction: column;
-    padding: 0;
+
     padding-bottom: 4em;
     align-items: center;
     width: 100%;
   }
 
+  .main__title{
+    justify-content: space-between;
+}
+
+  .main__title__text {
+    font-size: 1.5em;
+    width:70%
+  }
+  .main__title .far {
+    font-size: 1.5em;
+  }
+
   .main__section {
     width: 100%;
     align-items: center;
-  }
-
-  .main__section__title {
-    width: 90%;
   }
 
   .main__section__card {
@@ -237,10 +268,13 @@ a {
 @media (min-width: 481px) and (max-width: 1023px) {
   .main {
     flex-direction: column;
-    padding: 0;
     padding-bottom: 4em;
     align-items: center;
     width: 100%;
+  }
+
+  .main__title__text{
+    width:60%
   }
 
   .main__section {
@@ -248,9 +282,6 @@ a {
     align-items: center;
   }
 
-  .main__section__title {
-    width: 90%;
-  }
 
   .main__section__card {
     width: 90%;
@@ -264,13 +295,15 @@ a {
 
 .footer {
   background-color: #353535;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .footer__list {
   list-style-type: none;
   line-height: 1.5em;
   color: white;
+  margin-left: 1em;
+  padding-left:0
 }
 
 .footer__list__title {
@@ -290,10 +323,4 @@ a {
 
 .footer__list__link:hover {
   color: #ff79da;
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .footer {
-    padding: 0.5em;
-  }
 }

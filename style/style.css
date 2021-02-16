@@ -55,88 +55,101 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 2em;
+  background-color: #f6f6f6;
 }
 
 .containertop__address {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 0.2em;
+  border-top-style:outset;
+  border-top-color: #b1b1b1;
+  background-color: #e0e0e0;
+  height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: rgba(202, 202, 202, 0.945);
 }
 .containertop__address .fas {
-  font-size: 1.5em;
-  margin-top: 1em;
-  margin-right: 1em;
-  margin-bottom: 1em;
+  font-size: em;
+  position: absolute; left:-20%
 }
 
 .containertop__address__text {
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-align: center;
+  width:auto;
+  position: relative;
 }
 
 .containertop__title {
-  padding-top: 2em;
-  padding-bottom: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(236, 235, 235, 0.945);
   text-align: center;
+  padding-top:3em;
+  padding-bottom:3em;
 }
 
 .containertop__title__textmain {
-  font-size: 1.5em;
+  font-size: 2em;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .containertop__title__textsecond {
   font-size: 1em;
   text-align: center;
+  font-weight:lighter ;
 }
 
 .containertop_title__button {
   background: linear-gradient(160deg, #ff79da, #9356dc);
   border-radius: 10em 10em 10em 10em;
-  padding: 1em;
-  font-size: 1em;
+  padding: 1.2em;
+  font-size: 1.1em;
   color: white;
   border-style: none;
   cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0em 0.5em 0.3em 0.3em rgba(255, 253, 253, 0.75);
+  margin-top:1em;
+  margin-bottom: 1em;
+  width:16em;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .containertop__address {
-    padding-top: 0em;
-    padding-bottom: 0em;
+
+
+  .containertop__address__text {
+    font-size: 1.5em;
+    width:auto;
   }
+
   .containertop__address .fas {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
     font-size: 1em;
   }
   .containertop__address__text {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .containertop__title__textmain {
-    width: 80%;
+    width: 70%;
+    font-size: 1.5em;
   }
 
   .containertop__title__textsecond {
-    width: 90%;
+    width: 80%;
   }
 }
 
 /*TUTORIAL*/
 
 .containertutorial {
-  width: 100%;
   padding: 1em;
 }
 
@@ -151,51 +164,73 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5em;
-  flex-direction:column;
+  margin:auto;
+  width:95%;
 }
 
 .containertutorial__list__button {
-  border-radius: 1em;
-  padding: 0.2em;
-  background-color: rgba(236, 235, 235, 0.945);
-  width: 40%;
   border-radius: 2em;
+  padding-top: 0.8em;
+  padding-bottom:0.8em;
+  padding-left:0.8em;
+  padding-right:0em;
+  background-color: #f6f6f6;
+  width: 29%;
   display: flex;
   align-items: center;
   margin-bottom: 1em;
+  position: relative;
 }
 
-.containertutorial__list__button__numbercontainer {
+
+
+.container__tutorial__list__button__number {
+  position: absolute;
+  left: -0.5em;
   color: white;
+  top: auto;
   background: #9356dc;
   border-radius: 100%;
   padding: 0.5em;
-  margin-left: -1em;
-  width: 1em;
-  height: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 0.7em;
+  height: 0.7em;
+  font-size: 0.8em;
 }
 
 .containertutorial__list__button .fas {
-  width: 20%;
+  width: 15%;
   display: flex;
   justify-content: center;
   color: grey;
 }
+.fas .selected{
+    color:#9356dc;
+  }
+
 .containertutorial__list__button__text {
-  width: 75%;
+  width: 85%;
+  font-weight: bold;
   display: flex;
   justify-content: flex-start;
+  font-size: 1em;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .containertutorial {
-    padding-top: 2em;
+    padding-top: 3em;
     padding-bottom: 3em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+
+  .containertutorial__title {
+    font-size: 1.5em;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
   }
 
   .containertutorial_list {
@@ -204,7 +239,7 @@ a {
   }
   .containertutorial__list__button {
     width: 85%;
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5em;
   }
   .containertutorial__list__button__numbercontainer {
     width: 0.5em;
@@ -226,7 +261,7 @@ a {
 /*RESTAURANTS*/
 
 .containerrestaurants {
-  background-color: rgba(236, 235, 235, 0.945);
+  background-color: #f6f6f6;
   height: auto;
   padding: 1em;
 }
@@ -255,6 +290,16 @@ a {
 .containerrestaurants__list__card__image {
   height: 80%;
   border-radius: 1em;
+  position: relative;
+}
+
+.containerrestaurants__list__card__image__new{
+  position: absolute; top: 1em; right: 1em;
+  background-color: #99E2D0;
+  padding:0.5em;
+  color: #1a4d3f;
+  border-radius: 0.2em;
+
 }
 
 .containerrestaurants__list__card__image__img {
@@ -268,58 +313,66 @@ a {
 .containerrestaurants__list__card__text {
   height: 25%;
   background-color: white;
-  padding: 0.5em;
+  padding:0.5em;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .containerrestaurants__list__card__text p {
   color: black;
-  margin-top: 0.3em;
-  margin-bottom: 0.3em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 }
 
 .containerrestaurants__list__card__text__name {
   font-weight: bold;
-  width: 70%;
+  width: 85%;
 }
 
 .containerrestaurants__list__card__text__location {
-  width: 70%;
+  width: 85%;
 }
 
 .containerrestaurants__list__card__text .far {
   font-size: 1.5em;
+  width:15%;
+  height:50%;
   color: grey;
+  text-align: center
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .containerrestaurants {
-    padding-top: 2em;
+    padding-top: 4em;
     padding-bottom: 3em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-left: 0em;
+    padding-right: 0em;
   }
   .containerrestaurants__title {
-    width: 100%;
-    margin: 0em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1em;
+    margin-top: 0em;
   }
   .containerrestaurants__list__card {
-    width: 100%;
-    margin: 0em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2em;
+    margin-top: 0em;
   }
 
   .containerrestaurants__list__card__image {
-    height: 70%;
+    height: 75%;
   }
   .containerrestaurants__list__card__text {
-    height: 30%;
+    height: 25%;
   }
 }
 
@@ -333,13 +386,15 @@ a {
 
 .footer {
   background-color: #353535;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .footer__list {
   list-style-type: none;
   line-height: 1.5em;
   color: white;
+  margin-left: 1em;
+  padding-left:0
 }
 
 .footer__list__title {
@@ -359,10 +414,4 @@ a {
 
 .footer__list__link:hover {
   color: #ff79da;
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .footer {
-    padding: 0.5em;
-  }
 }

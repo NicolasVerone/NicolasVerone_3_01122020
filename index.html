@@ -6,7 +6,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
     <meta name="description" content="ohmyfood" />
-    <meta name="keywords" content="ohmyfood, reservation, resautaurants, commande repas en ligne" />
     <meta name="author" content="ohmyfood" />
     <link rel="stylesheet" type="text/css" href="style/style.css" />
     <script src="https://kit.fontawesome.com/7c1a4ed08f.js" crossorigin="anonymous"></script>
@@ -27,8 +26,10 @@
 
     <div class="containertop">
         <div class="containertop__address">
-            <i class="fas fa-map-marker-alt"></i>
-            <p class="containertop__address__text">Paris, Belleville</p>
+            <span class="containertop__address__text">
+                <i class="fas fa-map-marker-alt"></i>
+                Paris, Belleville
+            </span>
         </div>
         <div class="containertop__title">
             <h2 class="containertop__title__textmain">Réservez le menu qui vous convient</h2>
@@ -45,25 +46,20 @@
     <section class="containertutorial">
         <h2 class="containertutorial__title">Fonctionnement</h2>
         <div class="containertutorial_list">
+
             <div class="containertutorial__list__button">
-                <div class="containertutorial__list__button__numbercontainer">
-                    <span class="container__tutorial__list__button__number">1</span>
-                </div>
+                <span class="container__tutorial__list__button__number">1</span>
                 <i class="fas fa-mobile-alt"></i>
                 <p class="containertutorial__list__button__text">Choisissez un restaurant</p>
             </div>
             <div class="containertutorial__list__button">
-                <div class="containertutorial__list__button__numbercontainer">
-                    <span class="container__tutorial__list__button__number">2</span>
-                </div>
+                <span class="container__tutorial__list__button__number">2</span>
                 <i class="fas fa-list-ul"></i>
                 <p class="containertutorial__list__button__text">Composez votre menu</p>
             </div>
             <div class="containertutorial__list__button">
-                <div class="containertutorial__list__button__numbercontainer">
-                    <span class="container__tutorial__list__button__number">3</span>
-                </div>
-                <i class="fas fa-store"></i>
+                <span class="container__tutorial__list__button__number">3</span>
+                <i class="fas fa-store selected"></i>
                 <p class="containertutorial__list__button__text">Dégustez au restaurant</p>
             </div>
         </div>
@@ -82,6 +78,7 @@
                         <img class="containerrestaurants__list__card__image__img"
                             src="images/restaurants/lapalettedugout.jpg"
                             alt="La palette du goût, restaurant d'exception situé à Paris Ménlimontant" />
+                            <span class="containerrestaurants__list__card__image__new">Nouveau</span>
                     </div>
                     <div class="containerrestaurants__list__card__text">
                         <p class="containerrestaurants__list__card__text__name">La palette du goût</p>
@@ -96,6 +93,7 @@
                         <img class="containerrestaurants__list__card__image__img"
                             src="images/restaurants/lanoteenchantee.jpg"
                             alt="La note enchantée, restaurant d'exception situé à Paris Charonne" />
+                            <span class="containerrestaurants__list__card__image__new">Nouveau</span>
                     </div>
                     <div class="containerrestaurants__list__card__text">
                         <p class="containerrestaurants__list__card__text__name">La note enchantée</p>
@@ -146,7 +144,8 @@
             <li class="footer__list__element"><a class="footer__list__link" href="#"><i
                         class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
             <li class="footer__list__element"><a class="footer__list__link" href="#">Mentions légales</a></li>
-            <li class="footer__list__element"><a class="footer__list__link" href="mailto:hello@ohmyfood.com">Contact</a></li>
+            <li class="footer__list__element"><a class="footer__list__link" href="mailto:hello@ohmyfood.com">Contact</a>
+            </li>
         </ul>
     </footer>
 
