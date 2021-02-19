@@ -185,36 +185,110 @@ a {
 
 .main__section__card {
   width: 95%;
-  height: 4em;
+  height: 2.5em;
+  padding-left:1em;
   background-color: white;
-  padding: 0.5em;
+  display:flex;
+  justify-content: space-between;
   border-radius: 1em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   margin-bottom: 1em;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.main__section__card p {
+.main__section__card__textcontainer {
+  display:flex;
+  flex-direction: column;
+  width:85%
+}
+
+.main__section__card__textcontainer p {
   margin-top: 0.1em;
   margin-bottom: 0.1em;
   height: 1em;
+  scale (1);
 }
 
 .main__section__card__text1 {
   width: 100%;
+  height:50%;
   font-weight: bold;
+  font-size: 0.8em;
+  text-overflow:ellipsis; overflow:hidden;
+  transition: transform 500ms;
 }
 
 .main__section__card__text2 {
-  width: 90%;
-  font-size: 0.9em;
+  width: 100%;
+  height:50%;
+  font-size: 0.8em;
+  text-overflow:ellipsis; overflow:hidden;
+  transition: transform 500ms;
 }
 
 .main__section__card__price {
-  width: 10%;
+  width: 15%;
+  height: auto;
   font-weight: bold;
+  display:flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position:relative; left:4em;
+  transition:transform 500ms;
+  padding-right:1em;
 }
+
+.main__section__card__checked{
+  height: 100%;
+  width:4em;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:relative; left:4em;
+  background-color: #99E2D0;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  transition:transform 500ms
+}
+
+.main__section__card__checked .fas{
+  transition: transform 500ms;
+  padding: 0.3em;
+  background-color: white;
+  border-radius:1em;
+  color: #99E2D0;
+}
+
+
+  /*ANIMATION*/
+
+.main__section__card:hover .main__section__card__checked{
+  transform:translate(-4em);
+}
+
+.main__section__card:hover .main__section__card__checked .fas{
+  transform:rotate(360deg);
+}
+
+.main__section__card:hover .main__section__card__price{
+  transform:translate(-4em)
+}
+
+.main__section__card:hover .main__section__card__textcontainer{
+  transform:scale(0.7)
+}
+
+
+
+
+
+/* FIN ANIMATION*/
+
+
+
+
+
+
 
 .main__button {
   background: linear-gradient(160deg, #ff79da, #9356dc);
