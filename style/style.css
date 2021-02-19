@@ -119,6 +119,7 @@ a {
   margin-top:1em;
   margin-bottom: 1em;
   width:16em;
+  box-shadow:0.5em 0.5em 1em #929191;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -180,6 +181,12 @@ a {
   align-items: center;
   margin-bottom: 1em;
   position: relative;
+  box-shadow:0.5em 0.5em 1em #929191;
+  cursor: pointer;
+}
+
+.containertutorial__list__button:hover .fas{
+  color:#9356dc;
 }
 
 
@@ -285,6 +292,7 @@ a {
   border-style: solid;
   border-width: 0em;
   margin: 2em;
+  box-shadow:0.5em 1em 1em #929191;
 }
 
 .containerrestaurants__list__card__image {
