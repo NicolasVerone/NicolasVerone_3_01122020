@@ -4,6 +4,15 @@
 
 /*PAGE*/
 
+:root{
+--background-color-1:#f6f6f6;
+--background-color-2:#e0e0e0;
+--background-color-footer:#353535;
+--primary-color-1:#9356DC;
+--primary-color-2:#FF79DA;
+--primary-color-3:#99E2D0;
+}
+
 body {
   margin-left: 5%;
   margin-right: 5%;
@@ -56,7 +65,7 @@ a {
   display: flex;
   flex-direction: column;
   padding: 2em;
-  background-color: #f6f6f6;
+  background-color: var(--background-color-1);
 }
 
 .containertop__address {
@@ -65,7 +74,7 @@ a {
   border-top: 0.2em;
   border-top-style:outset;
   border-top-color: #b1b1b1;
-  background-color: #e0e0e0;
+  background-color: var(--background-color-2);
   height: auto;
   display: flex;
   justify-content: center;
@@ -107,7 +116,7 @@ a {
 }
 
 .containertop_title__button {
-  background: linear-gradient(160deg, #ff79da, #9356dc);
+  background: linear-gradient(160deg, var(--primary-color-2), var(--primary-color-1));
   border-radius: 10em 10em 10em 10em;
   padding: 1.2em;
   font-size: 1.1em;
@@ -175,7 +184,7 @@ a {
   padding-bottom:0.8em;
   padding-left:0.8em;
   padding-right:0em;
-  background-color: #f6f6f6;
+  background-color: var(--background-color-1);
   width: 29%;
   display: flex;
   align-items: center;
@@ -185,8 +194,12 @@ a {
   cursor: pointer;
 }
 
+.containertutorial__list__button:hover{
+  background-color:var(--primary-color-1 * 5% darker) ;
+}
+
 .containertutorial__list__button:hover .fas{
-  color:#9356dc;
+  color:var(--primary-color-1);
 }
 
 
@@ -196,7 +209,7 @@ a {
   left: -0.5em;
   color: white;
   top: auto;
-  background: #9356dc;
+  background: var(--primary-color-1);
   border-radius: 100%;
   padding: 0.5em;
   display: flex;
@@ -214,7 +227,7 @@ a {
   color: grey;
 }
 .fas .selected{
-    color:#9356dc;
+    color:var(--primary-color-1);
   }
 
 .containertutorial__list__button__text {
@@ -268,7 +281,7 @@ a {
 /*RESTAURANTS*/
 
 .containerrestaurants {
-  background-color: #f6f6f6;
+  background-color: var(--background-color-1);
   height: auto;
   padding: 1em;
 }
@@ -303,7 +316,7 @@ a {
 
 .containerrestaurants__list__card__image__new{
   position: absolute; top: 1em; right: 1em;
-  background-color: #99E2D0;
+  background-color:var(--primary-color-3);
   padding:0.5em;
   color: #1a4d3f;
   border-radius: 0.2em;
@@ -421,5 +434,5 @@ a {
 }
 
 .footer__list__link:hover {
-  color: #ff79da;
+  color:var(--primary-color-2);
 }
