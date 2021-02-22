@@ -1,0 +1,95 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: "Roboto";
+    background-color: teal;
+  }
+
+
+  .main__section__card {
+    display: flex;
+    width: 30%;
+    height:4em;
+    margin: auto;
+    border-radius:1em;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: white;
+  }
+
+
+.main__section__card__textcontainer {
+    flex-grow: 1;
+    width: 10em;
+    background-color: white;
+    padding-left:0.5em;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+  }
+
+  .main__section__card__textcontainer p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin:0;
+  }
+
+  .main__section__card__text1{
+      font-size:1.2em;
+      font-weight: bold;
+  }
+
+  .main__section__card__text2{
+      font-size:1em;
+   
+  }
+  
+  .main__section__card__price {
+    width: 4em;
+    background: #fde;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: white;
+    padding-right:0.5em;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .main__section__card__check {
+    display: flex;
+    width: 0;
+    transition: all 1s;
+    background-color: #99e2d0;
+  }
+  .main__section__card__check .main__section__card__checkcontainer {
+    margin: auto;
+    border-width: 0.2em;
+    border-style:solid;
+    border-color:#99e2d0;;
+    border-radius: 50%;
+    color: #99e2d0;
+    background-color: #99e2d0;
+    transition: transform 1s;
+    transform: rotate(180deg);
+  }
+
+  .main__section__card__check .main__section__card__checkcontainer .fas{
+    padding: 0.5em;
+  background-color: white;
+  border-radius: 1em;
+  color: #99e2d0;
+  }
+  
+ 
+  .main__section__card:hover .main__section__card__check {
+    width: 5em;
+    
+  }
+  .main__section__card:hover .main__section__card__check .main__section__card__checkcontainer {
+    transform: rotate(0deg);
+  }
