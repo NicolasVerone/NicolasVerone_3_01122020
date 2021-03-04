@@ -5,38 +5,50 @@
 /*PAGE*/
 
 :root {
-  --background-color-1: #f6f6f6;
-  --background-color-2: #e0e0e0;
+  --background-color-header-top: #f6f6f6;
+  --background-color-header-main: #e0e0e0;
   --background-color-footer: #353535;
-  --primary-color-1: #9356dc;
-  --primary-color-1-light: #af8add;
-  --primary-color-2: #ff79da;
-  --primary-color-2-light: #fbafe6;
-  --primary-color-3: #99e2d0;
+  --background-color-4:#ffffff;
+  --box-shadow: #929191;
+  --box--shadow-dark:#5d5d5d;
+  --font-color-1:#ffffff;
+  --font-color-2:#000000;
+  --font-color-icon:grey;
+  --primary-color-purple: #9356dc;
+  --primary-color-purple-light: #e2d4f5;
+  --primary-color-pink: #ff79da;
+  --primary-color-pink-light: #fbafe6;
+  --primary-color-green: #99e2d0;
 }
 
 body {
   margin-left: 5%;
   margin-right: 5%;
   font-family: "Roboto";
+  margin-top:0;
+  margin-bottom:0;
 }
 
 a {
   text-decoration: none;
 }
 
-@media (min-width: 320px) and (max-width: 1279px) {
+@media (min-width: 320px) and (max-width: 1024px) {
   body {
     margin-left: 0%;
     margin-right: 0%;
+    margin-top:0;
+    margin-bottom:0;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1025px) {
   body {
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
+    width: 1000px;
+    margin-top:0;
+    margin-bottom:0;
   }
 }
 
@@ -45,7 +57,7 @@ a {
   margin: auto;
   height: 100%;
   width: 100%;
-  background-color: white;
+  background-color: var(--background-color-4);
   display: flex;
   align-content: center;
   justify-content: center;
@@ -54,20 +66,16 @@ a {
   animation-name: opening;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-  z-index: 50;
+  z-index: 50000;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1025px) {
   .container__loading {
-    width: 1200px;
+    width: 1000px;
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 1279) {
-  .container__loading {
-    width: 1200px;
-  }
-}
+
 
 @keyframes opening {
   90% {
@@ -122,7 +130,7 @@ a {
 
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -100;
   }
 }
 
@@ -134,14 +142,14 @@ a {
   align-content: center;
   width: 30em;
   height: 30em;
-  background-color: #99e2d0;
+  background-color:var(--primary-color-green);
   border-radius: 100%;
   animation-name: loading;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
 
-@media screen and (min-width: 320px) and (max-width: 1019px) {
+@media screen and (min-width: 320px) and (max-width: 1024px) {
   .container__loading__animation {
     width: 15em;
     height: 15em;
@@ -150,22 +158,22 @@ a {
 
 @keyframes loading {
   0% {
-    background-color: white;
+    background-color: red;
   }
   20% {
-    background-color: #9356dc;
+    background-color: var(--primary-color-purple);
   }
   40% {
-    background-color: #ff79da;
+    background-color: var(--primary-color-pink)
   }
   60% {
-    background-color: #99e2d0;
+    background-color: var(--primary-color-green);
   }
   80% {
-    background-color: #9356dc;
+    background-color: var(--primary-color-purple);
   }
   100% {
-    background-color: white;
+    background-color: var(--background-color-4);
   }
   90% {
     opacity: 1;
@@ -215,13 +223,13 @@ a {
 .container__loading__text {
   font-size: 5em;
   font-family: "Shrikhand";
-  color: white;
+  color: var(--font-color-1);
   animation-name: text;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 
-@media screen and (min-width: 320px) and (max-width: 1019px) {
+@media screen and (min-width: 320px) and (max-width: 1024px) {
   .container__loading__text {
     font-size: 2em;
   }
@@ -259,8 +267,9 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 2em;
-  background-color: var(--background-color-1);
+  background-color: var(--background-color-header-main);
 }
 
 .containertop__address {
@@ -268,14 +277,15 @@ a {
   padding-bottom: 0.5em;
   border-top: 0.2em;
   border-top-style: outset;
-  border-top-color: #b1b1b1;
+  border-top-color: var(--background-color-footer);
   background-color: var(--background-color-2);
   height: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .containertop__address .fas {
-  font-size: em;
+  font-size: 1em;
   position: absolute;
   left: -20%;
 }
@@ -292,7 +302,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(236, 235, 235, 0.945);
+  background-color: var(--background-color-1);
   text-align: center;
   padding-top: 3em;
   padding-bottom: 3em;
@@ -314,48 +324,41 @@ a {
 .containertop__title__button {
   background: linear-gradient(
     160deg,
-    var(--primary-color-2),
-    var(--primary-color-1)
+    var(--primary-color-pink),
+    var(--primary-color-purple)
   );
   border-radius: 10em 10em 10em 10em;
   padding: 1.2em;
   font-size: 1.1em;
-  color: white;
+  color:var(--font-color-1);
   border-style: none;
   cursor: pointer;
   font-weight: bold;
-  box-shadow: 0em 0.5em 0.3em 0.3em rgba(255, 253, 253, 0.75);
   margin-top: 1em;
   margin-bottom: 1em;
   width: 16em;
-  box-shadow: 0.5em 0.5em 0.5em #c3c1c1;
-  z-index: 1;
+  box-shadow: 0.2rem 0.2rem 0.5rem grey;
   position: relative;
 }
 
-.containertop__title__button:hover::after {
-  opacity: 1;
-  border-radius: 10em 10em 10em 10em;
-  box-shadow: 0.5em 0.5em 0.5em #e9e6e6;
-}
-
-.containertop__title__button::after {
-  content: "";
-  background: linear-gradient(
-    160deg,
-    var(--primary-color-2-light),
-    var(--primary-color-1-light)
-  );
-  transition: opacity 250ms;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  border-radius: 10em 10em 10em 10em;
-}
+.containertop__title__button:hover{
+  box-shadow: 0.2rem 0.2rem 0.5rem grey;;
+  animation-name:button-hover;
+  animation-duration:200ms;
+  animation-fill-mode: forwards;
+  }
+  
+  @keyframes button-hover{
+    
+      from {
+        opacity: 1;
+        box-shadow: 0.2rem 0.2rem 0.5rem grey;;
+      }
+      to {
+        opacity:0.7;
+        box-shadow: 0.2rem 0.2rem 0.5rem rgb(37, 37, 37);;
+      }
+    }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .containertop__address__text {
@@ -413,42 +416,40 @@ a {
   display: flex;
   align-items: center;
   margin-bottom: 1em;
-  position: relative;
-  box-shadow: 0.5em 0.5em 0.5em #929191;
+  box-shadow: 0.2rem 0.2rem 0.5rem grey;
   cursor: pointer;
-  z-index: 1;
+position:relative;
 }
 
-.containertutorial__list__button:hover::after {
-  opacity: 1;
-  border-radius: 2em;
-  box-shadow: 0.5em 0.5em 0.5em #e9e6e6;
+.containertutorial__list__button:hover{
+  animation-name:tutorial-hover;
+animation-duration:200ms;
+animation-fill-mode: forwards
 }
+
+@keyframes tutorial-hover{
+from{
+  background-color: var(--background-color-1)
+}
+to{
+  background-color: var(--primary-color-purple-light)
+}
+}
+
+
 
 .containertutorial__list__button:hover .fas {
-  color: var(--primary-color-1);
+  color: var(--primary-color-purple);
 }
 
-.containertutorial__list__button::after {
-  content: "";
-  background-color: var(--primary-color-1-light);
-  transition: opacity 250ms;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  border-radius: 2em;
-}
+
 
 .container__tutorial__list__button__number {
   position: absolute;
   left: -0.5em;
-  color: white;
+  color: var(--font-color-1);
   top: auto;
-  background: var(--primary-color-1);
+  background: var(--primary-color-purple);
   border-radius: 100%;
   padding: 0.5em;
   display: flex;
@@ -463,10 +464,10 @@ a {
   width: 15%;
   display: flex;
   justify-content: center;
-  color: grey;
+  color: var(--font-color-icon);
 }
 .fas .selected {
-  color: var(--primary-color-1);
+  color: var(--primary-color-purple);
 }
 
 .containertutorial__list__button__text {
@@ -506,7 +507,7 @@ a {
   }
 }
 
-@media (min-width: 481px) and (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 1024px) {
   .containertutorial__list {
     flex-direction: column;
     justify-content: center;
@@ -544,11 +545,11 @@ a {
   border-style: solid;
   border-width: 0em;
   margin: 2em;
-  box-shadow: 0.5em 1em 1em #929191;
+  box-shadow: 0.2rem 0.2rem 0.8rem grey;
 }
 
 .containerrestaurants__list__card__image {
-  height: 80%;
+  height: 70%;
   border-radius: 1em;
   position: relative;
 }
@@ -557,7 +558,7 @@ a {
   position: absolute;
   top: 1em;
   right: 1em;
-  background-color: var(--primary-color-3);
+  background-color: var(--primary-color-green);
   padding: 0.5em;
   color: #1a4d3f;
   border-radius: 0.2em;
@@ -573,7 +574,7 @@ a {
 
 .containerrestaurants__list__card__text {
   height: 25%;
-  background-color: white;
+  background-color: var(--background-color-4);
   padding: 0.5em;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
@@ -585,8 +586,8 @@ a {
 }
 
 .containerrestaurants__list__card__text p {
-  color: black;
-  margin-top: 0.2em;
+  color:var(--font-color-2);
+  margin-top: 0.1em;
   margin-bottom: 0.2em;
 }
 
@@ -599,26 +600,85 @@ a {
   width: 85%;
 }
 
-.containerrestaurants__list__card__text .far {
-  font-size: 1.5em;
-  width: 15%;
-  height: 50%;
-  text-align: center;
+.containerrestaurants__list__card__star {
   position: relative;
-  cursor: pointer;
-  color: grey;
-  transition: color 250ms;
-  font-size: 1.5em;
-  width: 15%;
-  height: 50%;
-  text-align: center;
-  z-index: 5;
-}
+  width: 1.5em;
+  height:1.5em
+ }
 
-.containerrestaurants__list__card__text .far:hover {
-  color: var(--primary-color-2);
-  font-weight: bold;
-}
+ .containerrestaurants__list__card__star:hover{
+cursor: pointer;
+
+ }
+ 
+ .containerrestaurants__list__card__star .heart-no {
+  display: block;
+  width: 100%;
+  height: 100%;
+ }
+
+
+
+
+.containerrestaurants__list__card__star .heart-yes {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity:0;
+ }
+
+
+ .containerrestaurants__list__card__star:hover .heart-no, .containerrestaurants__list__card__star:active .heart-no {
+  opacity:0
+ }
+ 
+
+ .containerrestaurants__list__card__star:hover .heart-yes, .containerrestaurants__list__card__star:active .heart-yes {
+  animation-name:selection;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ @keyframes selection {
+
+  from{
+
+opacity:0;
+  }
+
+  to{
+
+opacity:1;
+
+  }
+ }
+
+ .containerrestaurants__list__card__star:hover .heart-yes .image-heart-yes,
+ .containerrestaurants__list__card__star:active .heart-yes .image-heart-yes
+ {
+     animation-name:selection-ok;
+     animation-duration:1s;
+     animation-fill-mode: forwards;
+     transform-origin: center;
+
+ }
+
+ @keyframes selection-ok{
+     from{
+     width:0px;
+     height:0px
+     }
+
+     to{
+
+  width:100%;
+     height:100%;
+     }
+ }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .containerrestaurants {
@@ -650,7 +710,7 @@ a {
   }
 }
 
-@media (min-width: 481px) and (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 1024px) {
   .containerrestaurants__list__card {
     width: 100%;
   }
@@ -659,14 +719,14 @@ a {
 /*FOOTER*/
 
 .footer {
-  background-color: #353535;
+  background-color: var(--background-color-footer);
   padding: 0.5em;
 }
 
 .footer__list {
   list-style-type: none;
   line-height: 1.5em;
-  color: white;
+  color: var(--font-color-1);
   margin-left: 1em;
   padding-left: 0;
 }
@@ -678,7 +738,7 @@ a {
 }
 
 .footer__list__element a {
-  color: white;
+  color: var(--font-color-1);
 }
 
 .footer__list .fas {
@@ -687,5 +747,5 @@ a {
 }
 
 .footer__list__link:hover {
-  color: var(--primary-color-2);
+  color: var(--primary-color-pink);
 }

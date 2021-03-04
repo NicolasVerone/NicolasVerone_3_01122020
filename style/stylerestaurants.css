@@ -5,7 +5,11 @@
 :root {
   --background-color-1: #f6f6f6;
   --background-color-2: #e0e0e0;
-  --background-color-3: #353535;
+  --background-color-footer: #353535;
+  --background-color-4: #ffffff;
+  --box-shadow: #929191;
+  --font-color-1: #ffffff;
+  --font-color-2: #000000;
   --primary-color-1: #9356dc;
   --primary-color-1-light: #af8add;
   --primary-color-2: #ff79da;
@@ -25,28 +29,20 @@ a {
   text-decoration: none;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 1024px) {
   body {
     margin-left: 0%;
     margin-right: 0%;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1025px) {
   body {
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
+    width: 1000px;
   }
 }
-
-
-
-
-
-
-
-
 
 /*HEADER*/
 
@@ -65,7 +61,7 @@ a {
 
 .header__arrow__container a:link {
   text-decoration: none;
-  color: black;
+  color: var(--font-color-2);
 }
 
 .header__arrow__container a:hover {
@@ -73,7 +69,7 @@ a {
 }
 
 .header__arrow__container a:visited {
-  color: black;
+  color: var(--font-color-2);
 }
 
 .header__arrow__container .fas {
@@ -82,7 +78,7 @@ a {
 
 .header__arrow__container .fas:visited {
   text-decoration: none;
-  color: black;
+  color: var(--font-color-2);
 }
 
 .header__title__container {
@@ -93,17 +89,17 @@ a {
 
 .header__title__container a:link {
   text-decoration: none;
-  color: black;
+  color: var(--font-color-2);
 }
 
 .header__title__container:visited {
   text-decoration: none;
-  color: black;
+  color: var(--font-color-2);
 }
 
 .header__title__container a {
   text-decoration: none;
-  color: black;
+  color: var(--font-color-2);
 }
 
 .header__title {
@@ -113,12 +109,12 @@ a {
 
 .header__title.visited {
   text-decoration: none;
-  color: black;
+  color: var(--font-color-2);
 }
 
 .header__title a:link {
   text-decoration: none;
-  color: black;
+  color: var(--font-color-2);
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -155,7 +151,7 @@ a {
     width: 100%;
   }
 }
-@media (min-width: 481px) and (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 1024px) {
   .hero {
     height: 15em;
   }
@@ -194,27 +190,107 @@ a {
   padding-right: 1em;
 }
 
+
+
 .main__title__star {
-  width: 3em;
-  display: flex;
-  justify-content: center;
-}
-
-.main__title__star .far {
-  font-size: 1.5em;
   position: relative;
-  cursor: pointer;
-  color: grey;
-  transition: color 200ms;
-}
+  width: 1.5em;
+  height:1.5em
+ }
 
-.main__title__star .far:hover {
-  color: var(--primary-color-2);
-  font-weight: bold;
-}
+ .main__title__star:hover{
+cursor: pointer;
+
+ }
+ 
+ .main__title__star .heart-no {
+  display: block;
+  width: 100%;
+  height: 100%;
+ }
+
+
+
+
+.main__title__star .heart-yes {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity:0;
+ }
+
+
+ .main__title__star:hover .heart-no {
+  opacity:0
+ }
+ 
+
+ .main__title__star:hover .heart-yes {
+  animation-name:selection;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ @keyframes selection {
+
+  from{
+
+opacity:0;
+  }
+
+  to{
+
+opacity:1;
+
+  }
+ }
+
+ .main__title__star:hover .heart-yes .image-heart-yes{
+     animation-name:selection-ok;
+     animation-duration:1s;
+     animation-fill-mode: forwards;
+     transform-origin: center;
+
+ }
+
+ @keyframes selection-ok{
+     from{
+     width:0px;
+     height:0px
+     }
+
+     to{
+
+  width:100%;
+     height:100%;
+     }
+ }
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+/*ANIMATION 2*/
+
+
+
+/*ANIMATION 2 FIN*/
 
 .main__section {
-  width: 29%;
+  width: 30%;
   padding: 1em;
   overflow: hidden;
 }
@@ -234,73 +310,145 @@ a {
 .main__section__card {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 98%;
   height: 4em;
   margin: auto;
   border-radius: 1em;
   cursor: pointer;
-  background-color: white;
-  box-shadow: 0.5em 1em 1em #929191;
-  margin-bottom: 0.5em;
-  overflow:hidden
-}
-
-
-.card1 , .card2 , .card3 , .card4{
-  animation-name: card-display;
-  animation-duration: 3000ms;
-  animation-fill-mode: forwards;
-}
-
-
-.card2{
-  animation-delay:0.3s
-}
-
-.card3{
-  animation-delay:0.6s
-}
-
-.card4{
-
-  animation-delay:0.9s
-}
-
-
-
-@keyframes card-display{
-0% {
+  background-color: var(--background-color-4);
+  box-shadow: 0.2rem 0.2rem 0.5rem grey;
+  margin-bottom: 1em;
+  overflow: hidden;
   opacity: 0;
 }
-100% {
-  opacity:1;
-}
+
+@media screen and (min-width: 320px) and (max-width:1024px)
+
+{
+  .main__section__card{
+    width: 97%;
+
+  }
+
 }
 
+
+/* ANIMATION 4*/
+
+/*DESKTOP*/
+
+@media screen and (min-width: 1025px) {
+  .card1,
+  .card2,
+  .card3,
+  .card4 {
+    animation-name: card-display;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+  }
+
+  .card2 {
+    animation-delay: 0.3s;
+  }
+
+  .card3 {
+    animation-delay: 0.6s;
+  }
+
+  .card4 {
+    animation-delay: 0.9s;
+  }
+}
+
+@keyframes card-display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*TABLET & MOBILE*/
+@media (min-width: 320px) and (max-width: 1024px) {
+  #card1,
+  #card2,
+  #card3,
+  #card4,
+  #card5,
+  #card6,
+  #card7,
+  #card8,
+  #card9,
+  #card10 {
+    animation-name: card-display;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+  }
+
+  #card2 {
+    animation-delay: 0.3s;
+  }
+
+  #card2 {
+    animation-delay: 0.6s;
+  }
+
+  #card3 {
+    animation-delay: 0.9s;
+  }
+
+  #card4 {
+    animation-delay: 1.2s;
+  }
+
+  #card5 {
+    animation-delay: 1.5s;
+  }
+
+  #card6 {
+    animation-delay: 1.8s;
+  }
+
+  #card7 {
+    animation-delay: 2.1s;
+  }
+
+  #card8 {
+    animation-delay: 2.4s;
+  }
+
+  #card9 {
+    animation-delay: 2.7s;
+  }
+
+  #card10 {
+    animation-delay: 3s;
+  }
+}
+
+/*FIN ANIMATION 4*/
 
 .main__section__card__textcontainer {
   width: 80%;
-  background-color: white;
-  padding-left: 0.5em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  background-color: var(--background-color-4);
+  padding-left: 0.3em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
 }
 
-.main__section__card:hover  .main__section__card__textcontainer
-{
-  animation-name:appearance-text;
-    animation-duration:1s;
-    animation-fill-mode: forwards;
+.main__section__card:hover .main__section__card__textcontainer {
+  animation-name: appearance-text;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes appearance-text{
-   from {
-    width:80%;
-  }
-  to {
-    width:55%;
-  }
+.main__section__card:not(:hover) .main__section__card__textcontainer {
+  animation-name: appearance-text-back;
+  animation-duration: 150ms;
+  animation-fill-mode: forwards;
 }
+
 
 .main__section__card__textcontainer p {
   overflow: hidden;
@@ -310,7 +458,7 @@ a {
 }
 
 .main__section__card__text1 {
-  font-size: 1em;
+  font-size: 0.98em;
   font-weight: bold;
 }
 
@@ -320,11 +468,10 @@ a {
 
 .main__section__card__price {
   width: 20%;
-  background: #fde;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  background-color: white;
+  background-color: var(--background-color-4);
   padding-right: 0.5em;
   font-weight: bold;
   font-size: 1em;
@@ -334,56 +481,213 @@ a {
   display: flex;
   width: 0%;
   height: 100%;
-  background-color: #99e2d0;
+  background-color:var(--primary-color-3);
 }
 .main__section__card__check .main__section__card__checkcontainer {
   margin: auto;
   border-width: 0.2em;
   border-style: solid;
-  border-color: #99e2d0;
+  border-color: var(--primary-color-3);
   border-radius: 50%;
-  color: #99e2d0;
-  background-color: #99e2d0;
+  color: var(--primary-color-3);
+  background-color: var(--primary-color-3);
 }
 
 .main__section__card__check .main__section__card__checkcontainer .fas {
   padding: 0.4em;
-  background-color: white;
+  background-color: var(--background-color-4);
   border-radius: 1em;
-  color: #99e2d0;
+  color: var(--primary-color-3);
 }
 
-.main__section__card:hover  .main__section__card__check 
-{
-  animation-name:appearance-check;
-    animation-duration:1s;
-        animation-fill-mode: forwards;
+.main__section__card:hover .main__section__card__check {
+  animation-name: appearance-check;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes appearance-check{
-   from {
-    width:0%;
+.main__section__card:not(:hover) .main__section__card__check {
+  animation-name: appearance-check-back;
+  animation-duration: 150ms;
+  animation-fill-mode: forwards;
+}
+
+.main__section__card:hover
+  .main__section__card__check
+  .main__section__card__checkcontainer {
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main__section__card:not(:hover)
+  .main__section__card__check
+  .main__section__card__checkcontainer {
+  animation-name: rotation-back;
+  animation-duration: 150ms;
+  animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+/* ANIMATION 5*/
+
+/* ANIMATION 5* MOBILE*/
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+  @keyframes appearance-text {
+    from {
+      width: 80%;
+    }
+    to {
+      width: 60%;
+    }
+  }
+
+  @keyframes appearance-check {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 20%;
+    }
+  }
+
+  @keyframes appearance-text-back {
+    from {
+      width: 60%;
+    }
+    to {
+      width: 80%;
+    }
+  }
+  
+  @keyframes appearance-check-back {
+    from {
+      width: 20%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+
+}
+
+/* ANIMATION 5* TABLET*/
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+
+  @keyframes appearance-text {
+    from {
+      width: 80%;
+    }
+    to {
+      width: 70%;
+    }
+  }
+
+  @keyframes appearance-check {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 10%;
+    }
+  }
+
+  @keyframes appearance-text-back {
+    from {
+      width: 70%;
+    }
+    to {
+      width: 80%;
+    }
+  }
+  
+  @keyframes appearance-check-back {
+    from {
+      width: 10%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+
+
+
+}
+
+/* ANIMATION 5* DESKTOP*/
+
+@media screen and (min-width: 1025px) {
+
+@keyframes appearance-text {
+  from {
+    width: 80%;
   }
   to {
-    width:25%;
+    width: 55%;
   }
 }
 
-.main__section__card:hover  .main__section__card__check .main__section__card__checkcontainer{
-  animation-name:rotation;
-    animation-duration:1s;
-        animation-fill-mode: forwards;
+@keyframes appearance-check {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 25%;
+  }
+}
+
+@keyframes appearance-text-back {
+  from {
+    width: 55%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes appearance-check-back {
+  from {
+    width: 25%;
+  }
+  to {
+    width: 0%;
+  }
 }
 
 
 
-@keyframes rotation{
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
 }
- 
 
-/* FIN ANIMATION*/
+
+
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation-back {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* FIN ANIMATION 5*/
 
 .main__button {
   background: linear-gradient(
@@ -394,11 +698,11 @@ a {
   border-radius: 10em 10em 10em 10em;
   padding: 1.2em;
   font-size: 1.1em;
-  color: white;
+  color: var(--font-color-1);
   border-style: none;
   cursor: pointer;
   font-weight: bold;
-  box-shadow: 0.5em 0.5em 0.5em #c3c1c1;
+  box-shadow: 0.2rem 0.2rem 0.5rem grey;
   margin-top: 1em;
   margin-bottom: 1em;
   width: 12em;
@@ -407,31 +711,24 @@ a {
   position: relative;
 }
 
-.main__button:hover::after {
-  opacity: 1;
-  border-radius: 10em 10em 10em 10em;
-  box-shadow: 0.5em 0.5em 0.5em #e9e6e6;
+.main__button:hover {
+  animation-name: button-hover;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
 }
 
-.main__button::after {
-  content: "";
-  background: linear-gradient(
-    160deg,
-    var(--primary-color-2-light),
-    var(--primary-color-1-light)
-  );
-  transition: opacity 250ms;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  border-radius: 10em 10em 10em 10em;
+@keyframes button-hover {
+  from {
+    opacity: 1;
+    box-shadow: 0.2rem 0.2rem 0.5rem grey;
+  }
+  to {
+    opacity:0.7;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgb(37, 37, 37);
+  }
 }
 
-@media (min-width: 320px) and (max-width: 1023px) {
+@media (min-width: 320px) and (max-width: 1024px) {
   .main {
     flex-direction: column;
     padding-bottom: 4em;
@@ -483,51 +780,35 @@ a {
     padding-bottom: 0.5em;
   }
 
-  .main__section__card {
-    width: 100%;
-    height: 3.5em;
-  }
+ 
 
   .main__section__card__text1 {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   .main__section__card__text2 {
-    font-size: 0.9em;
+    font-size: 0.70em;
   }
 
   .main__button {
     margin-top: 2em;
-    box-shadow: 0.5em 0.5em 1em #929191;
+    box-shadow: 0.2rem 0.2rem 0.5rem grey;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1220px) {
-  .main__section {
-    width: 30%;
-    padding: 0.5em;
-  }
 
-  .main__section__card {
-    padding: 0.3em;
-  }
-
-  .main__section__card__text2 {
-    font-size: 0.78em;
-  }
-}
 
 /*FOOTER*/
 
 .footer {
-  background-color: var(--background-color-3);
+  background-color: var(--background-color-footer);
   padding: 0.5em;
 }
 
 .footer__list {
   list-style-type: none;
   line-height: 1.5em;
-  color: white;
+  color: var(--font-color-1);
   margin-left: 1em;
   padding-left: 0;
 }
@@ -539,7 +820,7 @@ a {
 }
 
 .footer__list__element a {
-  color: white;
+  color: var(--font-color-1);
 }
 
 .footer__list .fas {

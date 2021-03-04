@@ -10,7 +10,7 @@
     <meta name="author" content="ohmyfood" />
     <link rel="stylesheet" type="text/css" href="../style/stylerestaurants.css" />
     <script src="https://kit.fontawesome.com/7c1a4ed08f.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" type="image/ico" href="icones/favicon.ico" />
+
     <title>À la française | Ohmyfood!</title>
 </head>
 
@@ -51,14 +51,21 @@
             <h2 class="main__title__text">
                 À la française
             </h2>
-            <i class="far fa-heart"></i>
+            <div class="main__title__star">
+                <img src="images/heart.PNG" />
+                <div class="heart-no">
+                </div>
+                <div class="heart-yes">
+                  <img class="image-heart-yes" src="images/heart-selected.PNG">
+                </div>
+              </div>
         </div>
         <div class="main__section">
 
             <h3 class="main__section__title">
                 Entrées
             </h3>
-            <div class="main__section__card card1">
+            <div id="card1" class="main__section__card card1">
                 <div class="main__section__card__textcontainer">
                     <p class="main__section__card__text1">Tartare de poulpe acidulé</p>
                     <p class="main__section__card__text2">Aux zestes d'orange</p>
@@ -72,7 +79,7 @@
                     </div>
                 </div>
             </div>
-            <div class="main__section__card card2">
+            <div id="card2" class="main__section__card card2">
                 <div class="main__section__card__textcontainer">
                     <p class="main__section__card__text1">Velouté de légumes d'antan</p>
                     <p class="main__section__card__text2">Carotte, panais, topinambour</p>
@@ -86,7 +93,7 @@
                     </div>
                 </div>
             </div>
-            <div class="main__section__card card3">
+            <div id="card3" class="main__section__card card3">
                 <div class="main__section__card__textcontainer">
                     <p class="main__section__card__text1">Soupe à l'oignon</p>
                     <p class="main__section__card__text2">Revisitée</p>
@@ -105,102 +112,102 @@
             <h3 class="main__section__title">
                 Plats
             </h3>
- 
-            <div class="main__section__card card1">
-          
-                    <div class="main__section__card__textcontainer">
-                        <p class="main__section__card__text1">Coquilles Saint-Jacques</p>
-                        <p class="main__section__card__text2">Accompagnées d'une purée de panais</p>
-                    </div>
-                    <div class="main__section__card__price">
-                        <p>40€</p>
-                    </div>
-                    <div class="main__section__card__check">
-                        <div class="main__section__card__checkcontainer">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-              
-            </div>
-                <div class="main__section__card card2">
-                    <div class="main__section__card__textcontainer">
-                        <p class="main__section__card__text1">Magret de canard</p>
-                        <p class="main__section__card__text2">Et parmentier de pommes de terre</p>
-                    </div>
-                    <div class="main__section__card__price">
-                        <p>35€</p>
-                    </div>
-                    <div class="main__section__card__check">
-                        <div class="main__section__card__checkcontainer">
-                            <i class="fas fa-check"></i>
-                        </div>
+
+            <div id="card4" class="main__section__card card1">
+
+                <div class="main__section__card__textcontainer">
+                    <p class="main__section__card__text1">Coquilles Saint-Jacques</p>
+                    <p class="main__section__card__text2">Accompagnées d'une purée de panais</p>
+                </div>
+                <div class="main__section__card__price">
+                    <p>40€</p>
+                </div>
+                <div class="main__section__card__check">
+                    <div class="main__section__card__checkcontainer">
+                        <i class="fas fa-check"></i>
                     </div>
                 </div>
-                <div class="main__section__card card3">
-                    <div class="main__section__card__textcontainer">
-                        <p class="main__section__card__text1">Pigeonneau d’Ille-et-Vilaine</p>
-                        <p class="main__section__card__text2">Sur son lit de gnocchis aux légumes</p>
-                    </div>
-                    <div class="main__section__card__price">
-                        <p>44€</p>
-                    </div>
-                    <div class="main__section__card__check">
-                        <div class="main__section__card__checkcontainer">
-                            <i class="fas fa-check"></i>
-                        </div>
+
+            </div>
+            <div id="card5" class="main__section__card card2">
+                <div class="main__section__card__textcontainer">
+                    <p class="main__section__card__text1">Magret de canard</p>
+                    <p class="main__section__card__text2">Et parmentier de pommes de terre</p>
+                </div>
+                <div class="main__section__card__price">
+                    <p>35€</p>
+                </div>
+                <div class="main__section__card__check">
+                    <div class="main__section__card__checkcontainer">
+                        <i class="fas fa-check"></i>
                     </div>
                 </div>
             </div>
-            <div class="main__section">
-                <h3 class="main__section__title">
-                    Desserts
-                </h3>
-                <div class="main__section__card card1">
-                    <div class="main__section__card__textcontainer">
-                        <p class="main__section__card__text1">Pétales de violettes glacés</p>
-                        <p class="main__section__card__text2">Et purée de noisettes</p>
-                    </div>
-                    <div class="main__section__card__price">
-                        <p>18€</p>
-                    </div>
-                    <div class="main__section__card__check">
-                        <div class="main__section__card__checkcontainer">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
+            <div id="card6" class="main__section__card card3">
+                <div class="main__section__card__textcontainer">
+                    <p class="main__section__card__text1">Pigeonneau d’Ille-et-Vilaine</p>
+                    <p class="main__section__card__text2">Sur son lit de gnocchis aux légumes</p>
                 </div>
-                <div class="main__section__card card2">
-                    <div class="main__section__card__textcontainer">
-                        <p class="main__section__card__text1">Fondant au chocolat</p>
-                        <p class="main__section__card__text2">Revisité</p>
-                    </div>
-                    <div class="main__section__card__price">
-                        <p>22€</p>
-                    </div>
-                    <div class="main__section__card__check">
-                        <div class="main__section__card__checkcontainer">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
+                <div class="main__section__card__price">
+                    <p>44€</p>
                 </div>
-                <div class="main__section__card card3">
-                    <div class="main__section__card__textcontainer">
-                        <p class="main__section__card__text1">Millefeuille croustillant</p>
-                        <p class="main__section__card__text2">Myrtilles et pâte d’amande</p>
-                    </div>
-                    <div class="main__section__card__price">
-                        <p>23€</p>
-                    </div>
-                    <div class="main__section__card__check">
-                        <div class="main__section__card__checkcontainer">
-                            <i class="fas fa-check"></i>
-                        </div>
+                <div class="main__section__card__check">
+                    <div class="main__section__card__checkcontainer">
+                        <i class="fas fa-check"></i>
                     </div>
                 </div>
             </div>
-            <button class="main__button" type="button" value="Explore">
-                Commander
-            </button>
+        </div>
+        <div class="main__section">
+            <h3 class="main__section__title">
+                Desserts
+            </h3>
+            <div id="card7" class="main__section__card card1">
+                <div class="main__section__card__textcontainer">
+                    <p class="main__section__card__text1">Pétales de violettes glacés</p>
+                    <p class="main__section__card__text2">Et purée de noisettes</p>
+                </div>
+                <div class="main__section__card__price">
+                    <p>18€</p>
+                </div>
+                <div class="main__section__card__check">
+                    <div class="main__section__card__checkcontainer">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="card8" class="main__section__card card2">
+                <div class="main__section__card__textcontainer">
+                    <p class="main__section__card__text1">Fondant au chocolat</p>
+                    <p class="main__section__card__text2">Revisité</p>
+                </div>
+                <div class="main__section__card__price">
+                    <p>22€</p>
+                </div>
+                <div class="main__section__card__check">
+                    <div class="main__section__card__checkcontainer">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="card9" class="main__section__card card3">
+                <div class="main__section__card__textcontainer">
+                    <p class="main__section__card__text1">Millefeuille croustillant</p>
+                    <p class="main__section__card__text2">Myrtilles et pâte d’amande</p>
+                </div>
+                <div class="main__section__card__price">
+                    <p>23€</p>
+                </div>
+                <div class="main__section__card__check">
+                    <div class="main__section__card__checkcontainer">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="main__button" type="button" value="Explore">
+            Commander
+        </button>
 
     </main>
 
