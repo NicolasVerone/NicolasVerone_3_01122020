@@ -5,14 +5,14 @@
 /*PAGE*/
 
 :root {
-  --background-color-header-top: #f6f6f6;
-  --background-color-header-main: #e0e0e0;
+  --background-color-header-main: #f6f6f6;
+  --background-color-header-top: #e0e0e0;
   --background-color-footer: #353535;
-  --background-color-4:#ffffff;
+  --background-color-card:#ffffff;
   --box-shadow: #929191;
-  --box--shadow-dark:#5d5d5d;
-  --font-color-1:#ffffff;
-  --font-color-2:#000000;
+  --box-shadow-dark:#5d5d5d;
+  --font-color-white:#ffffff;
+  --font-color-black:#000000;
   --font-color-icon:grey;
   --primary-color-purple: #9356dc;
   --primary-color-purple-light: #e2d4f5;
@@ -57,7 +57,7 @@ a {
   margin: auto;
   height: 100%;
   width: 100%;
-  background-color: var(--background-color-4);
+  background-color: var(--background-color-card);
   display: flex;
   align-content: center;
   justify-content: center;
@@ -158,22 +158,16 @@ a {
 
 @keyframes loading {
   0% {
-    background-color: red;
-  }
-  20% {
-    background-color: var(--primary-color-purple);
+    background-color:white;
   }
   40% {
-    background-color: var(--primary-color-pink)
-  }
-  60% {
-    background-color: var(--primary-color-green);
+    background-color: #9356dc
   }
   80% {
-    background-color: var(--primary-color-purple);
+    background-color: #ff79da;
   }
   100% {
-    background-color: var(--background-color-4);
+    background-color: white;
   }
   90% {
     opacity: 1;
@@ -223,7 +217,7 @@ a {
 .container__loading__text {
   font-size: 5em;
   font-family: "Shrikhand";
-  color: var(--font-color-1);
+  color: var(--font-color-white);
   animation-name: text;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -278,7 +272,7 @@ a {
   border-top: 0.2em;
   border-top-style: outset;
   border-top-color: var(--background-color-footer);
-  background-color: var(--background-color-2);
+  background-color: var(--background-color-header-top);
   height: auto;
   display: flex;
   justify-content: center;
@@ -302,7 +296,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--background-color-1);
+  background-color: var(--background-color-header-main);
   text-align: center;
   padding-top: 3em;
   padding-bottom: 3em;
@@ -324,13 +318,13 @@ a {
 .containertop__title__button {
   background: linear-gradient(
     160deg,
-    var(--primary-color-pink),
-    var(--primary-color-purple)
+    #ff79da,
+    #9356dc
   );
   border-radius: 10em 10em 10em 10em;
   padding: 1.2em;
   font-size: 1.1em;
-  color:var(--font-color-1);
+  color:var(--font-color-white);
   border-style: none;
   cursor: pointer;
   font-weight: bold;
@@ -429,10 +423,10 @@ animation-fill-mode: forwards
 
 @keyframes tutorial-hover{
 from{
-  background-color: var(--background-color-1)
+  background-color: #f6f6f6
 }
 to{
-  background-color: var(--primary-color-purple-light)
+  background-color: #e2d4f5;
 }
 }
 
@@ -447,7 +441,7 @@ to{
 .container__tutorial__list__button__number {
   position: absolute;
   left: -0.5em;
-  color: var(--font-color-1);
+  color: var(--font-color-white);
   top: auto;
   background: var(--primary-color-purple);
   border-radius: 100%;
@@ -574,7 +568,7 @@ to{
 
 .containerrestaurants__list__card__text {
   height: 25%;
-  background-color: var(--background-color-4);
+  background-color: var(--background-color-card);
   padding: 0.5em;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
@@ -586,7 +580,7 @@ to{
 }
 
 .containerrestaurants__list__card__text p {
-  color:var(--font-color-2);
+  color:var(--font-color-black);
   margin-top: 0.1em;
   margin-bottom: 0.2em;
 }
@@ -726,7 +720,7 @@ opacity:1;
 .footer__list {
   list-style-type: none;
   line-height: 1.5em;
-  color: var(--font-color-1);
+  color: var(--font-color-white);
   margin-left: 1em;
   padding-left: 0;
 }
@@ -738,7 +732,7 @@ opacity:1;
 }
 
 .footer__list__element a {
-  color: var(--font-color-1);
+  color: var(--font-color-white);
 }
 
 .footer__list .fas {
