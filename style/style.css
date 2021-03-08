@@ -597,82 +597,102 @@ to{
 .containerrestaurants__list__card__star {
   position: relative;
   width: 1.5em;
-  height:1.5em
- }
+  height: 1.5em;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
 
- .containerrestaurants__list__card__star:hover{
-cursor: pointer;
 
- }
- 
- .containerrestaurants__list__card__star .heart-no {
+.containerrestaurants__list__card__star:hover {
+  cursor: pointer;
+}
+
+.containerrestaurants__list__card__star .heart-no {
   display: block;
   width: 100%;
   height: 100%;
- }
-
-
-
+}
 
 .containerrestaurants__list__card__star .heart-yes {
   position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  opacity:0;
- }
+top:0;
+  height: 0%;
+  width: 0%;
+  opacity: 0;
+}
 
 
- .containerrestaurants__list__card__star:hover .heart-no, .containerrestaurants__list__card__star:active .heart-no {
-  opacity:0
- }
- 
+.containerrestaurants__list__card__star .heart-no .far{
+    font-size:1.5em;
+    color:black;
+    }
 
- .containerrestaurants__list__card__star:hover .heart-yes, .containerrestaurants__list__card__star:active .heart-yes {
-  animation-name:selection;
-  animation-duration:1s;
+.containerrestaurants__list__card__star .heart-yes .fas{
+  font-size:0em;
+  }
+
+.containerrestaurants__list__card__star:hover .heart-no {
+    animation-name: selection-removal;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes selection-removal{
+95%{
+    opacity:1
+
+}
+
+100%{
+opacity:0
+}
+
+}
+
+.containerrestaurants__list__card__star:hover .heart-yes {
+  animation-name: selection;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
-  display:flex;
-  justify-content: center;
-  align-items: center;
- }
+  width:0%;
+  height:0%;
 
- @keyframes selection {
+}
 
-  from{
-
-opacity:0;
+@keyframes selection {
+  from {
+    opacity: 0;
+    height:0%;
+    width:0%
   }
 
-  to{
-
-opacity:1;
+  to {
+    opacity: 1;
+    height:100%;
+    width:100%
 
   }
- }
+}
 
- .containerrestaurants__list__card__star:hover .heart-yes .image-heart-yes,
- .containerrestaurants__list__card__star:active .heart-yes .image-heart-yes
- {
-     animation-name:selection-ok;
-     animation-duration:1s;
-     animation-fill-mode: forwards;
-     transform-origin: center;
+.containerrestaurants__list__card__star:hover .heart-yes .fas {
+  animation-name: selection-ok;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transform-origin: center;
+  background: linear-gradient(to top,#ff79da, #9356dc);
+  background-clip:text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
- }
-
- @keyframes selection-ok{
-     from{
-     width:0px;
-     height:0px
-     }
-
-     to{
-
-  width:100%;
-     height:100%;
-     }
- }
+@keyframes selection-ok {
+  from {
+    font-size:0em
+  }
+  to {
+   font-size:1.5em;
+  }
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
   .containerrestaurants {

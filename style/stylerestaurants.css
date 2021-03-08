@@ -202,7 +202,11 @@ a {
   position: relative;
   width: 1.5em;
   height: 1.5em;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .main__title__star:hover {
   cursor: pointer;
@@ -216,51 +220,80 @@ a {
 
 .main__title__star .heart-yes {
   position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
+top:0;
+  height: 0%;
+  width: 0%;
   opacity: 0;
 }
 
+
+.main__title__star .heart-no .far{
+    font-size:1.5em;
+    }
+
+.main__title__star .heart-yes .fas{
+  font-size:0em;
+  }
+
 .main__title__star:hover .heart-no {
-  opacity: 0;
+    animation-name: selection-removal;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes selection-removal{
+95%{
+    opacity:1
+
+}
+
+100%{
+opacity:0.3
+}
+
 }
 
 .main__title__star:hover .heart-yes {
   animation-name: selection;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width:0%;
+  height:0%;
+
 }
 
 @keyframes selection {
   from {
     opacity: 0;
+    height:0%;
+    width:0%
   }
 
   to {
     opacity: 1;
+    height:100%;
+    width:100%
+
   }
 }
 
-.main__title__star:hover .heart-yes .image-heart-yes {
+.main__title__star:hover .heart-yes .fas {
   animation-name: selection-ok;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   transform-origin: center;
+  background: linear-gradient(to top,#ff79da, #9356dc);
+  background-clip:text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 @keyframes selection-ok {
   from {
-    width: 0px;
-    height: 0px;
+    font-size:0em
   }
-
   to {
-    width: 100%;
-    height: 100%;
+   font-size:1.5em;
   }
 }
 
